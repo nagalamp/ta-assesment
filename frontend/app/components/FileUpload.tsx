@@ -7,7 +7,6 @@ export default function FileUpload() {
   const [response, setResponse] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
-  // Read URL from environment variable
   const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
   const handleUpload = async () => {
@@ -44,12 +43,14 @@ export default function FileUpload() {
   };
 
   return (
-    <div className="p-10">
+    <div className="p-10 flex flex-col items-center">
+
       <h1 className="text-3xl font-bold mb-6">Timeline Extraction</h1>
 
-      <div className="flex items-center space-x-6">
+      {/* Upload Area */}
+      <div className="flex items-center space-x-6 mb-6">
 
-        {/* Choose File Box */}
+        {/* Choose File */}
         <label className="border-2 border-dashed border-gray-400 rounded-xl p-6 text-center cursor-pointer hover:border-gray-600 transition w-64">
           <p className="text-gray-700">
             {file ? file.name : "Click to choose file"}
@@ -70,17 +71,28 @@ export default function FileUpload() {
         >
           Upload
         </button>
+
       </div>
 
-      {loading && (
-        <p className="text-gray-600 mt-4 animate-pulse">Uploading...</p>
-      )}
+      {/* Response Section */}
+      <div className="mt-4 w-full flex justify-center">
+        <div className="w-full max-w-2xl flex flex-col items-center">
+          
+          {loading && (
+            <p className="text-gray-600 animate-pulse text-center">Uploading...</p>
+          )}
 
-      {response && (
-        <pre className="bg-gray-100 p-4 mt-6 rounded-lg text-sm">
-          {JSON.stringify(response, null, 2)}
-        </pre>
-      )}
+          {response && (
+            <div className="max-h-[400px] overflow-auto border rounded-lg bg-gray-50 p-4 shadow w-full">
+              <pre className="text-sm whitespace-pre-wrap break-words text-center">
+                {JSON.stringify(response, null, 2)}
+              </pre>
+            </div>
+          )}
+
+        </div>
+      </div>
+
     </div>
   );
 }
