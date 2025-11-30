@@ -1,13 +1,212 @@
 "use client";
 
 import { useState } from "react";
-
+import Timetable from './Timetable';
 export default function FileUpload() {
   const [file, setFile] = useState<File | null>(null);
   const [response, setResponse] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
   const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+
+  const timetableData = {
+    "structuredData": {
+      "header": {
+        "school": "Little Thurrock Primary School",
+        "class": "2EJ",
+        "term": "Autumn 2 2024",
+        "teacher": "Miss Joynes RS"
+      },
+      "timetable": [
+        {
+          "day": "Monday",
+          "time": "8:35-8.50",
+          "subject": "Registration and Early Morning work"
+        },
+        {
+          "day": "Monday",
+          "time": "",
+          "subject": "Assembly"
+        },
+        {
+          "day": "Monday",
+          "time": "9.30-10am",
+          "subject": "RWI"
+        },
+        {
+          "day": "Monday",
+          "time": "",
+          "subject": "Maths"
+        },
+        {
+          "day": "Monday",
+          "time": "10:35am",
+          "subject": "Break"
+        },
+        {
+          "day": "Monday",
+          "time": "12-1em",
+          "subject": "Lunch"
+        },
+        {
+          "day": "Monday",
+          "time": "",
+          "subject": "English"
+        },
+        {
+          "day": "Monday",
+          "time": "1:30 - 2:30",
+          "subject": "Science"
+        },
+        {
+          "day": "Tuesday",
+          "time": "8:35-8.50",
+          "subject": "Registration and Early Morning work"
+        },
+        {
+          "day": "Tuesday",
+          "time": "",
+          "subject": "Assembly"
+        },
+        {
+          "day": "Tuesday",
+          "time": "9.30-10am",
+          "subject": "RWI"
+        },
+        {
+          "day": "Tuesday",
+          "time": "",
+          "subject": "Maths"
+        },
+        {
+          "day": "Tuesday",
+          "time": "10:35am",
+          "subject": "Break"
+        },
+        {
+          "day": "Tuesday",
+          "time": "12-1em",
+          "subject": "Lunch"
+        },
+        {
+          "day": "Tuesday",
+          "time": "1:15-2:00",
+          "subject": "PHSE"
+        },
+        {
+          "day": "Tuesday",
+          "time": "2:00 - 3:00",
+          "subject": "Anti Bullying Computing"
+        },
+        {
+          "day": "Wednesday",
+          "time": "8:35-8.50",
+          "subject": "Registration and Early Morning work"
+        },
+        {
+          "day": "Wednesday",
+          "time": "",
+          "subject": "Assembly"
+        },
+        {
+          "day": "Wednesday",
+          "time": "9.30-10am",
+          "subject": "RWI"
+        },
+        {
+          "day": "Wednesday",
+          "time": "",
+          "subject": "Maths"
+        },
+        {
+          "day": "Wednesday",
+          "time": "10:35am",
+          "subject": "Break"
+        },
+        {
+          "day": "Wednesday",
+          "time": "12-1em",
+          "subject": "Lunch"
+        },
+        {
+          "day": "Wednesday",
+          "time": "",
+          "subject": "History"
+        },
+        {
+          "day": "Wednesday",
+          "time": "",
+          "subject": "Music"
+        },
+        {
+          "day": "Thursday",
+          "time": "8:35-8.50",
+          "subject": "Registration and Early Morning work"
+        },
+        {
+          "day": "Thursday",
+          "time": "",
+          "subject": "Assembly"
+        },
+        {
+          "day": "Thursday",
+          "time": "9.30-10am",
+          "subject": "RWI"
+        },
+        {
+          "day": "Thursday",
+          "time": "10:35am",
+          "subject": "Break"
+        },
+        {
+          "day": "Thursday",
+          "time": "",
+          "subject": "nglis"
+        },
+        {
+          "day": "Thursday",
+          "time": "12-1em",
+          "subject": "Lunch"
+        },
+        {
+          "day": "Thursday",
+          "time": "",
+          "subject": "Sentence Stacking (pracM:?:?TRS)"
+        },
+        {
+          "day": "Friday",
+          "time": "8:35-8.50",
+          "subject": "Registration and Early Morning work"
+        },
+        {
+          "day": "Friday",
+          "time": "",
+          "subject": "Assembly"
+        },
+        {
+          "day": "Friday",
+          "time": "9.30-10am",
+          "subject": "RWI"
+        },
+        {
+          "day": "Friday",
+          "time": "10:35am",
+          "subject": "Break"
+        },
+        {
+          "day": "Friday",
+          "time": "",
+          "subject": "Engli sh"
+        },
+        {
+          "day": "Friday",
+          "time": "12-1em",
+          "subject": "Lunch"
+        }
+      ]
+    }
+  };
 
   const handleUpload = async () => {
     if (!file) {
@@ -33,6 +232,10 @@ export default function FileUpload() {
       });
 
       const data = await res.json();
+
+      console.log(data.structuredData.structuredData)
+
+
       setResponse(data);
     } catch (error) {
       console.error("Upload failed:", error);
@@ -43,56 +246,65 @@ export default function FileUpload() {
   };
 
   return (
-    <div className="p-10 flex flex-col items-center">
-
+    <div className="p-10 w-full h-full">
+  
       <h1 className="text-3xl font-bold mb-6">Timeline Extraction</h1>
-
-      {/* Upload Area */}
-      <div className="flex items-center space-x-6 mb-6">
-
-        {/* Choose File */}
-        <label className="border-2 border-dashed border-gray-400 rounded-xl p-6 text-center cursor-pointer hover:border-gray-600 transition w-64">
-          <p className="text-gray-700">
-            {file ? file.name : "Click to choose file"}
-          </p>
-          <p className="text-xs text-gray-500 mt-1">(or drag & drop)</p>
-
-          <input
-            type="file"
-            className="hidden"
-            onChange={(e) => setFile(e.target.files?.[0] || null)}
-          />
-        </label>
-
-        {/* Upload Button */}
-        <button
-          onClick={handleUpload}
-          className="px-6 py-2 bg-blue-600 text-white font-medium rounded-full shadow hover:bg-blue-700 transition-all"
-        >
-          Upload
-        </button>
-
-      </div>
-
-      {/* Response Section */}
-      <div className="mt-4 w-full flex justify-center">
-        <div className="w-full max-w-2xl flex flex-col items-center">
-          
+  
+      {/* MAIN LAYOUT: LEFT (UPLOAD 25%) | RIGHT (CONTENT 75%) */}
+      <div className="flex w-full gap-6">
+  
+        {/* LEFT PANEL - 25% */}
+        <div className="w-1/4 flex flex-col items-center">
+  
+          {/* Choose File */}
+          <label className="border-2 border-dashed border-gray-400 rounded-xl p-6 text-center cursor-pointer hover:border-gray-600 transition w-full">
+            <p className="text-gray-700">
+              {file ? file.name : "Click to choose file"}
+            </p>
+            <p className="text-xs text-gray-500 mt-1">(or drag & drop)</p>
+  
+            <input
+              type="file"
+              className="hidden"
+              onChange={(e) => setFile(e.target.files?.[0] || null)}
+            />
+          </label>
+  
+          {/* Upload Button */}
+          <button
+            onClick={handleUpload}
+            className="mt-4 px-6 py-2 bg-blue-600 text-white font-medium rounded-full shadow hover:bg-blue-700 transition-all w-full"
+          >
+            Upload
+          </button>
+  
           {loading && (
-            <p className="text-gray-600 animate-pulse text-center">Uploading...</p>
+            <p className="mt-4 text-gray-600 animate-pulse text-center">Uploading...</p>
           )}
-
-          {response && (
-            <div className="max-h-[400px] overflow-auto border rounded-lg bg-gray-50 p-4 shadow w-full">
-              <pre className="text-sm whitespace-pre-wrap break-words text-center">
-                {JSON.stringify(response, null, 2)}
-              </pre>
-            </div>
-          )}
-
+        </div>
+  
+        {/* RIGHT PANEL - 75% */}
+        <div className="w-full flex flex-col items-center">
+  
+          <div className="w-full ">
+  
+            {response && (
+              <div className=" border rounded-lg bg-gray-50 p-4 shadow w-full">
+                <pre className="text-sm whitespace-pre-wrap break-words text-center">
+                  <Timetable data={response.structuredData.structuredData} />
+                </pre>
+              </div>
+            )}
+  
+            {!response && (
+              <div className="text-gray-400 text-center mt-20">
+                <p>No content yet. Upload a file to process.</p>
+              </div>
+            )}
+  
+          </div>
         </div>
       </div>
-
     </div>
   );
 }

@@ -1,0 +1,190 @@
+{
+  "header": {
+    "school": "Little Thurrock Primary School",
+    "class": "2EJ",
+    "term": "Autumn 2 2024",
+    "teacher": "Miss Joynes RS"
+  },
+  "timetable": [
+    {
+      "day": "Monday",
+      "time": "8:35-8.50",
+      "subject": "Registration and Early Morning work"
+    },
+    {
+      "day": "Monday",
+      "time": "9.30- HED",
+      "subject": "RWI"
+    },
+    {
+      "day": "Monday",
+      "time": "10.20",
+      "subject": "Singing"
+    },
+    {
+      "day": "Monday",
+      "time": "10:35am",
+      "subject": "Break"
+    },
+    {
+      "day": "Monday",
+      "time": "12-1em",
+      "subject": "Lunch"
+    },
+    {
+      "day": "Monday",
+      "time": "",
+      "subject": "E Maths"
+    },
+    {
+      "day": "Monday",
+      "time": "",
+      "subject": "2 English"
+    },
+    {
+      "day": "Monday",
+      "time": "1:30 - 2:30",
+      "subject": "Science"
+    },
+    {
+      "day": "Tuesday",
+      "time": "8:35-8.50",
+      "subject": "Registration and Early Morning work"
+    },
+    {
+      "day": "Tuesday",
+      "time": "9.30- HED",
+      "subject": "RWI"
+    },
+    {
+      "day": "Tuesday",
+      "time": "10.20",
+      "subject": "Singing"
+    },
+    {
+      "day": "Tuesday",
+      "time": "10:35am",
+      "subject": "Break"
+    },
+    {
+      "day": "Tuesday",
+      "time": "12-1em",
+      "subject": "Lunch"
+    },
+    {
+      "day": "Tuesday",
+      "time": "1:15-2:00",
+      "subject": "Math"
+    },
+    {
+      "day": "Tuesday",
+      "time": "2:00 - 3:00",
+      "subject": "PHSE"
+    },
+    {
+      "day": "Tuesday",
+      "time": "",
+      "subject": "Anti Bullying Computing Week"
+    },
+    {
+      "day": "Wednesday",
+      "time": "8:35-8.50",
+      "subject": "Registration and Early Morning work"
+    },
+    {
+      "day": "Wednesday",
+      "time": "9.30- HED",
+      "subject": "RWI"
+    },
+    {
+      "day": "Wednesday",
+      "time": "10.20",
+      "subject": "Singing"
+    },
+    {
+      "day": "Wednesday",
+      "time": "10:35am",
+      "subject": "Break"
+    },
+    {
+      "day": "Wednesday",
+      "time": "12-1em",
+      "subject": "Lunch"
+    },
+    {
+      "day": "Wednesday",
+      "time": "",
+      "subject": "L 5 Maths"
+    },
+    {
+      "day": "Wednesday",
+      "time": "",
+      "subject": "History"
+    },
+    {
+      "day": "Wednesday",
+      "time": "",
+      "subject": "Music"
+    },
+    {
+      "day": "Thursday",
+      "time": "8:35-8.50",
+      "subject": "Registration and Early Morning work"
+    },
+    {
+      "day": "Thursday",
+      "time": "9.30- HED",
+      "subject": "RWI"
+    },
+    {
+      "day": "Thursday",
+      "time": "10.20",
+      "subject": "Singing"
+    },
+    {
+      "day": "Thursday",
+      "time": "10:35am",
+      "subject": "Break"
+    },
+    {
+      "day": "Thursday",
+      "time": "12-1em",
+      "subject": "Lunch"
+    },
+    {
+      "day": "Thursday",
+      "time": "",
+      "subject": "nglis (Sentence Stacking (pracM:?:?TRS)"
+    },
+    {
+      "day": "Friday",
+      "time": "8:35-8.50",
+      "subject": "Registration and Early Morning work"
+    },
+    {
+      "day": "Friday",
+      "time": "9.30- HED",
+      "subject": "RWI"
+    },
+    {
+      "day": "Friday",
+      "time": "10.20",
+      "subject": "Singing"
+    },
+    {
+      "day": "Friday",
+      "time": "10:35am",
+      "subject": "Break"
+    },
+    {
+      "day": "Friday",
+      "time": "12-1em",
+      "subject": "Lunch"
+    },
+    {
+      "day": "Friday",
+      "time": "",
+      "subject": "Engli"
+    }
+  ]
+}
