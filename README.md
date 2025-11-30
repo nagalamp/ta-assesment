@@ -1,103 +1,107 @@
-TA Assessment – Full Stack Application
+# TA Assessment -- Full Stack Application
 
 This repository contains a full-stack application built with:
 
-Frontend: Next.js
-
-Backend: Node.js + Express
-
-OCR + AI Processing: Tesseract.js + Google Gemini API
+-   **Frontend:** Next.js\
+-   **Backend:** Node.js + Express\
+-   **OCR + AI Processing:** Tesseract.js + Google Gemini API
 
 Both applications run independently and communicate using REST APIs.
 
-📂 Project Structure
-ta-assesment/
-│
-├── frontend/     # Next.js app
-└── backend/      # Node.js + Express API
+## 📂 Project Structure
 
-🚀 Getting Started
+    ta-assesment/
+    │
+    ├── frontend/     # Next.js app
+    └── backend/      # Node.js + Express API
 
-Follow the steps below to clone, install dependencies, configure environment variables, and run both applications.
+## 🚀 Getting Started
 
-📥 1. Clone the Repository
-git clone https://github.com/nagalamp/ta-assesment.git
-cd ta-assesment
+Follow the steps below to clone, install dependencies, configure
+environment variables, and run both applications.
 
-⚙️ 2. Backend Setup (Node.js + Express)
-📌 Navigate to the backend folder
-cd backend
+## 📥 1. Clone the Repository
 
-📦 Install dependencies
-npm install
+    git clone https://github.com/nagalamp/ta-assesment.git
+    cd ta-assesment
 
-🔐 Create .env file
+## ⚙️ 2. Backend Setup (Node.js + Express)
+
+### Navigate to the backend folder
+
+    cd backend
+
+### Install dependencies
+
+    npm install
+
+### Create .env file
 
 Inside backend/ add:
 
-PORT=5001
-GEMINI_API_KEY=your_api_key_here
+    PORT=5001
+    GEMINI_API_KEY=your_api_key_here
 
+### Run backend server
 
-Replace your_api_key_here with your actual Gemini API key.
+    npm start
 
-▶️ Run backend server
-npm start
+or with nodemon:
 
+    npm run dev
 
-For development with nodemon:
+Backend runs at:
 
-npm run dev
+    http://localhost:5001
 
-🔥 Backend will run at:
-http://localhost:5001
+## 🌐 3. Frontend Setup (Next.js)
 
-🌐 3. Frontend Setup (Next.js)
-📌 Navigate to the frontend folder
-cd ../frontend
+### Navigate to the frontend folder
 
-📦 Install dependencies
-npm install
+    cd ../frontend
 
-🔐 Create .env.local file
+### Install dependencies
 
-Inside frontend/ add:
+    npm install
 
-NEXT_PUBLIC_API_URL=http://localhost:5001
+### Create .env.local file
 
-▶️ Run frontend
-npm run dev
+    NEXT_PUBLIC_API_URL=http://localhost:5001
 
-🌍 Frontend will run at:
-http://localhost:3000
+### Run frontend
 
-🧪 4. Usage
+    npm run dev
 
-Start backend on port 5001
+Frontend runs at:
 
-Start frontend on port 3000
+    http://localhost:3000
 
-The frontend connects automatically using NEXT_PUBLIC_API_URL
+## 🧪 Usage
 
-You can now upload images, perform OCR, and generate structured timetable data.
+1.  Start backend on port 5001\
+2.  Start frontend on port 3000\
+3.  The frontend connects automatically using NEXT_PUBLIC_API_URL
 
-🛠️ 5. Tech Stack
-Frontend
+## 🛠️ Tech Stack
 
-Next.js 14
+### Frontend
 
-React
+-   Next.js 14
+-   React
+-   Tailwind CSS
 
-Tailwind CSS
+### Backend
 
-Backend
+-   Node.js
+-   Express.js
+-   Tesseract.js
+-   Google Gemini API
+-   dotenv
 
-Node.js
+## 🤝 Contributing
 
-Express.js
+Pull requests are welcome. Open an issue first to discuss major changes.
 
-Tesseract.js (OCR)
+## 📄 License
 
-Google Gemini API
-
-dotenv
+This project is licensed under the MIT License.
