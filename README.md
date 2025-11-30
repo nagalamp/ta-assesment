@@ -1,4 +1,4 @@
-# TA Assessment -- Full Stack Application
+# TA Assessment -- OCR Project
 
 This repository contains a full-stack application built with:
 
