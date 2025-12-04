@@ -7,59 +7,44 @@
   },
   "timetable": [
     {
-      "day": "",
+      "day": "Monday",
       "time": "8:35-8.50",
       "subject": "Registration and Early Morning work"
     },
     {
-      "day": "",
+      "day": "Monday",
       "time": "",
       "subject": "Assembly"
     },
     {
-      "day": "",
-      "time": "9.30- HED",
+      "day": "Monday",
+      "time": "9.30-10am",
       "subject": "RWI"
     },
     {
-      "day": "",
+      "day": "Monday",
       "time": "10.20",
       "subject": "Singing"
     },
     {
-      "day": "",
+      "day": "Monday",
       "time": "10:35am",
       "subject": "Break"
     },
     {
-      "day": "",
-      "time": "10.35",
-      "subject": "Maths Con"
-    },
-    {
-      "day": "",
-      "time": "12-1em",
-      "subject": "Lunch"
-    },
-    {
-      "day": "",
-      "time": "",
-      "subject": "Meeting"
-    },
-    {
-      "day": "",
-      "time": "",
-      "subject": "Comprehens - ion/liiban \\’\\\\Térff(%"
-    },
-    {
       "day": "Monday",
-      "time": "1:30 - 2:30",
+      "time": "",
       "subject": "Maths"
     },
     {
       "day": "Monday",
-      "time": "1:30 - 2:30",
+      "time": "",
       "subject": "English"
+    },
+    {
+      "day": "Monday",
+      "time": "12-1pm",
+      "subject": "Lunch"
     },
     {
       "day": "Monday",
@@ -68,13 +53,28 @@
     },
     {
       "day": "Tuesday",
-      "time": "1:15-2:00",
-      "subject": "Math % £"
+      "time": "8:35-8.50",
+      "subject": "Registration and Early Morning work"
     },
     {
       "day": "Tuesday",
-      "time": "2:00 - 3:00",
-      "subject": "PHSE"
+      "time": "",
+      "subject": "Assembly"
+    },
+    {
+      "day": "Tuesday",
+      "time": "9.30-10am",
+      "subject": "RWI"
+    },
+    {
+      "day": "Tuesday",
+      "time": "10.20",
+      "subject": "Singing"
+    },
+    {
+      "day": "Tuesday",
+      "time": "10:35am",
+      "subject": "Break"
     },
     {
       "day": "Tuesday",
@@ -84,12 +84,52 @@
     {
       "day": "Tuesday",
       "time": "",
-      "subject": "Anti Bullying"
+      "subject": "Anti Bullying Week"
     },
     {
       "day": "Tuesday",
       "time": "",
       "subject": "Computing"
+    },
+    {
+      "day": "Tuesday",
+      "time": "12-1pm",
+      "subject": "Lunch"
+    },
+    {
+      "day": "Tuesday",
+      "time": "1:15-2:00",
+      "subject": "Math"
+    },
+    {
+      "day": "Tuesday",
+      "time": "2:00 - 3:00",
+      "subject": "PHSE"
+    },
+    {
+      "day": "Wednesday",
+      "time": "8:35-8.50",
+      "subject": "Registration and Early Morning work"
+    },
+    {
+      "day": "Wednesday",
+      "time": "",
+      "subject": "Assembly"
+    },
+    {
+      "day": "Wednesday",
+      "time": "9.30-10am",
+      "subject": "RWI"
+    },
+    {
+      "day": "Wednesday",
+      "time": "10.20",
+      "subject": "Singing"
+    },
+    {
+      "day": "Wednesday",
+      "time": "10:35am",
+      "subject": "Break"
     },
     {
       "day": "Wednesday",
@@ -107,14 +147,69 @@
       "subject": "Music"
     },
     {
+      "day": "Wednesday",
+      "time": "12-1pm",
+      "subject": "Lunch"
+    },
+    {
       "day": "Thursday",
-      "time": "",
-      "subject": "nglis"
+      "time": "8:35-8.50",
+      "subject": "Registration and Early Morning work"
     },
     {
       "day": "Thursday",
       "time": "",
-      "subject": "Sentence Stacking (pracM:?:?TRS)"
+      "subject": "Assembly"
+    },
+    {
+      "day": "Thursday",
+      "time": "9.30-10am",
+      "subject": "RWI"
+    },
+    {
+      "day": "Thursday",
+      "time": "10.20",
+      "subject": "Singing"
+    },
+    {
+      "day": "Thursday",
+      "time": "10:35am",
+      "subject": "Break"
+    },
+    {
+      "day": "Thursday",
+      "time": "",
+      "subject": "English (Sentence Stacking (pracM:?:?TRS))"
+    },
+    {
+      "day": "Thursday",
+      "time": "12-1pm",
+      "subject": "Lunch"
+    },
+    {
+      "day": "Friday",
+      "time": "8:35-8.50",
+      "subject": "Registration and Early Morning work"
+    },
+    {
+      "day": "Friday",
+      "time": "",
+      "subject": "Assembly"
+    },
+    {
+      "day": "Friday",
+      "time": "9.30-10am",
+      "subject": "RWI"
+    },
+    {
+      "day": "Friday",
+      "time": "10.20",
+      "subject": "Singing"
+    },
+    {
+      "day": "Friday",
+      "time": "10:35am",
+      "subject": "Break"
     },
     {
       "day": "Friday",
@@ -124,7 +219,12 @@
     {
       "day": "Friday",
       "time": "",
-      "subject": "Engli sh"
+      "subject": "English"
+    },
+    {
+      "day": "Friday",
+      "time": "12-1pm",
+      "subject": "Lunch"
     }
   ]
 }

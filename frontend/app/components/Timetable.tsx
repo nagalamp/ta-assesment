@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface TimetableItem {
   day: string;
@@ -19,10 +19,25 @@ interface StructuredData {
 }
 
 interface TimetableProps {
-  data: StructuredData;
+  data: StructuredData | null | undefined;
 }
 
 const Timetable: React.FC<TimetableProps> = ({ data }) => {
+  // --------------------- NULL HANDLING ---------------------
+  if (!data || !data.header || !data.timetable) {
+    return (
+      <div className="mx-auto p-6 bg-red-50 border border-red-300 rounded shadow text-center">
+        <h2 className="text-xl font-semibold text-red-700 mb-2">
+          ⚠️ No Data Available
+        </h2>
+        <p className="text-red-600">
+          Please check your Gemini API key or the API response.
+        </p>
+      </div>
+    );
+  }
+  // ---------------------------------------------------------
+
   const { header, timetable } = data;
 
   // Group timetable items by day
@@ -34,10 +49,10 @@ const Timetable: React.FC<TimetableProps> = ({ data }) => {
     return acc;
   }, {} as Record<string, TimetableItem[]>);
 
-  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
   return (
-    <div className=" mx-auto p-6 bg-white rounded shadow-lg">
+    <div className="mx-auto p-6 bg-white rounded shadow-lg">
       {/* Header Section */}
       <div className="mb-8 text-center pb-4">
         <h1 className="text-3xl font-bold text-gray-800 mb-2">
@@ -75,39 +90,54 @@ const Timetable: React.FC<TimetableProps> = ({ data }) => {
           <tbody>
             {days.map((day) => (
               <React.Fragment key={day}>
-                {groupedByDay[day]?.map((item, index) => (
-                  <tr
-                    key={`${day}-${index}`}
-                    className={`
-                      hover:bg-gray-50 transition-colors duration-200
-                      ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}
-                    `}
-                  >
-                    {index === 0 && (
-                      <td
-                        rowSpan={groupedByDay[day].length}
-                        className="border border-gray-300 px-4 py-3 font-semibold text-gray-800 align-top"
-                      >
-                        {day}
+                {groupedByDay[day]?.length ? (
+                  groupedByDay[day].map((item, index) => (
+                    <tr
+                      key={`${day}-${index}`}
+                      className={`hover:bg-gray-50 transition-colors duration-200 ${
+                        index % 2 === 0 ? "bg-white" : "bg-gray-50"
+                      }`}
+                    >
+                      {index === 0 && (
+                        <td
+                          rowSpan={groupedByDay[day].length}
+                          className="border border-gray-300 px-4 py-3 font-semibold text-gray-800 align-top"
+                        >
+                          {day}
+                        </td>
+                      )}
+                      <td className="border border-gray-300 px-4 py-3 text-gray-700">
+                        {item.time || "-"}
                       </td>
-                    )}
-                    <td className="border border-gray-300 px-4 py-3 text-gray-700">
-                      {item.time || '-'}
+                      <td className="border border-gray-300 px-4 py-3 text-gray-700">
+                        {item.subject}
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-3 font-semibold text-gray-700">
+                      {day}
                     </td>
-                    <td className="border border-gray-300 px-4 py-3 text-gray-700">
-                      {item.subject}
+                    <td
+                      className="border border-gray-300 px-4 py-3 text-gray-500"
+                      colSpan={2}
+                    >
+                      No classes
                     </td>
                   </tr>
-                ))}
+                )}
               </React.Fragment>
             ))}
           </tbody>
         </table>
       </div>
 
-      {/* Optional Footer */}
+      {/* Footer */}
       <div className="mt-6 text-center text-sm text-gray-500">
-        <p>Timetable generated for {header.class} - {header.term}</p>
+        <p>
+          Timetable generated for {header.class} - {header.term}
+        </p>
       </div>
     </div>
   );
