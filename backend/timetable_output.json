@@ -7,39 +7,59 @@
   },
   "timetable": [
     {
-      "day": "Monday",
+      "day": "",
       "time": "8:35-8.50",
       "subject": "Registration and Early Morning work"
     },
     {
-      "day": "Monday",
+      "day": "",
+      "time": "",
+      "subject": "Assembly"
+    },
+    {
+      "day": "",
       "time": "9.30- HED",
       "subject": "RWI"
     },
     {
-      "day": "Monday",
+      "day": "",
       "time": "10.20",
       "subject": "Singing"
     },
     {
-      "day": "Monday",
+      "day": "",
       "time": "10:35am",
       "subject": "Break"
     },
     {
-      "day": "Monday",
+      "day": "",
+      "time": "10.35",
+      "subject": "Maths Con"
+    },
+    {
+      "day": "",
       "time": "12-1em",
       "subject": "Lunch"
     },
     {
-      "day": "Monday",
+      "day": "",
       "time": "",
-      "subject": "E Maths"
+      "subject": "Meeting"
+    },
+    {
+      "day": "",
+      "time": "",
+      "subject": "Comprehens - ion/liiban \\’\\\\Térff(%"
     },
     {
       "day": "Monday",
-      "time": "",
-      "subject": "2 English"
+      "time": "1:30 - 2:30",
+      "subject": "Maths"
+    },
+    {
+      "day": "Monday",
+      "time": "1:30 - 2:30",
+      "subject": "English"
     },
     {
       "day": "Monday",
@@ -48,33 +68,8 @@
     },
     {
       "day": "Tuesday",
-      "time": "8:35-8.50",
-      "subject": "Registration and Early Morning work"
-    },
-    {
-      "day": "Tuesday",
-      "time": "9.30- HED",
-      "subject": "RWI"
-    },
-    {
-      "day": "Tuesday",
-      "time": "10.20",
-      "subject": "Singing"
-    },
-    {
-      "day": "Tuesday",
-      "time": "10:35am",
-      "subject": "Break"
-    },
-    {
-      "day": "Tuesday",
-      "time": "12-1em",
-      "subject": "Lunch"
-    },
-    {
-      "day": "Tuesday",
       "time": "1:15-2:00",
-      "subject": "Math"
+      "subject": "Math % £"
     },
     {
       "day": "Tuesday",
@@ -84,37 +79,22 @@
     {
       "day": "Tuesday",
       "time": "",
-      "subject": "Anti Bullying Computing Week"
+      "subject": "Maths"
     },
     {
-      "day": "Wednesday",
-      "time": "8:35-8.50",
-      "subject": "Registration and Early Morning work"
+      "day": "Tuesday",
+      "time": "",
+      "subject": "Anti Bullying"
     },
     {
-      "day": "Wednesday",
-      "time": "9.30- HED",
-      "subject": "RWI"
-    },
-    {
-      "day": "Wednesday",
-      "time": "10.20",
-      "subject": "Singing"
-    },
-    {
-      "day": "Wednesday",
-      "time": "10:35am",
-      "subject": "Break"
-    },
-    {
-      "day": "Wednesday",
-      "time": "12-1em",
-      "subject": "Lunch"
+      "day": "Tuesday",
+      "time": "",
+      "subject": "Computing"
     },
     {
       "day": "Wednesday",
       "time": "",
-      "subject": "L 5 Maths"
+      "subject": "Maths"
     },
     {
       "day": "Wednesday",
@@ -128,63 +108,23 @@
     },
     {
       "day": "Thursday",
-      "time": "8:35-8.50",
-      "subject": "Registration and Early Morning work"
-    },
-    {
-      "day": "Thursday",
-      "time": "9.30- HED",
-      "subject": "RWI"
-    },
-    {
-      "day": "Thursday",
-      "time": "10.20",
-      "subject": "Singing"
-    },
-    {
-      "day": "Thursday",
-      "time": "10:35am",
-      "subject": "Break"
-    },
-    {
-      "day": "Thursday",
-      "time": "12-1em",
-      "subject": "Lunch"
+      "time": "",
+      "subject": "nglis"
     },
     {
       "day": "Thursday",
       "time": "",
-      "subject": "nglis (Sentence Stacking (pracM:?:?TRS)"
-    },
-    {
-      "day": "Friday",
-      "time": "8:35-8.50",
-      "subject": "Registration and Early Morning work"
-    },
-    {
-      "day": "Friday",
-      "time": "9.30- HED",
-      "subject": "RWI"
-    },
-    {
-      "day": "Friday",
-      "time": "10.20",
-      "subject": "Singing"
-    },
-    {
-      "day": "Friday",
-      "time": "10:35am",
-      "subject": "Break"
-    },
-    {
-      "day": "Friday",
-      "time": "12-1em",
-      "subject": "Lunch"
+      "subject": "Sentence Stacking (pracM:?:?TRS)"
     },
     {
       "day": "Friday",
       "time": "",
-      "subject": "Engli"
+      "subject": "RWI"
+    },
+    {
+      "day": "Friday",
+      "time": "",
+      "subject": "Engli sh"
     }
   ]
 }
